@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<rect width="1200" height="420" fill="#1e1e1e"/>
+<rect width="1200" height="42" fill="#252526"/>
+<text x="24" y="28" fill="#cccccc" font-family="Arial" font-size="17">VS Code · script.js · Conflict Resolved</text>
+<rect x="20" y="62" width="1160" height="310" rx="4" fill="#181818" stroke="#444"/>
+<text x="42" y="102" fill="#858585" font-family="monospace" font-size="16">27</text>
+<text x="78" y="102" fill="#dcdcaa" font-family="monospace" font-size="15">themeToggle.textContent = isDark ? '☾ Dark' : '☼ Light';</text>
+<text x="42" y="144" fill="#858585" font-family="monospace" font-size="16">28</text>
+<text x="78" y="144" fill="#9cdcfe" font-family="monospace" font-size="15">localStorage.setItem('theme', isDark ? 'dark' : 'light');</text>
+<text x="42" y="186" fill="#858585" font-family="monospace" font-size="16">29</text>
+<text x="78" y="186" fill="#dcdcaa" font-family="monospace" font-size="15">renderCharts();</text>
+<text x="42" y="244" fill="#858585" font-family="monospace" font-size="16">✓</text>
+<text x="78" y="244" fill="#b5cea8" font-family="monospace" font-size="16">Conflict markers removed · persistent dark mode kept</text>
+<text x="78" y="300" fill="#6a9955" font-family="monospace" font-size="16">Merge resolved and committed.</text>
+</svg>
