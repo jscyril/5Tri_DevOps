@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Echelon · Security Console</title>
-    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./styles.css">
+
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <div class="brand"><span class="brand-mark">E</span><div><div class="brand-name">Echelon</div><div class="eyebrow">Security Console</div></div></div>
+        <div class="brand" id="openEchelon" style="cursor: pointer;"><span class="brand-mark">E</span><div><div class="brand-name">Echelon</div><div class="eyebrow">Security Console</div></div></div>
+        <div class="brand" id="openAquavision" style="cursor: pointer;"><span class="brand-mark">A</span><div><div class="brand-name">AquaVision</div><div class="eyebrow">CV Analysis</div></div></div>
         <nav class="nav" aria-label="Main navigation">
           <button class="nav-item active" data-page="overview"><span class="nav-icon">◒</span><span><b>Overview <small>00</small></b><em>AI health, cost & attack posture at a glance</em></span></button>
           <button class="nav-item" data-page="logs"><span class="nav-icon">▤</span><span><b>Threat Audit <small>01</small></b><em>Every prompt, and exactly why it was judged</em></span></button>
@@ -19,7 +23,7 @@
         <div class="sidebar-foot"><div class="status"><i></i>Firewall active</div><div class="foot-row"><button id="themeToggle" class="text-button">☼ Light</button><span class="shortcut"><kbd>⌘</kbd><kbd>K</kbd></span></div><button class="sign-out" id="signOut">↪&nbsp; Sign out</button></div>
       </aside>
 
-      <main class="main">
+      <main class="main" id="mainPanel">
         <header class="page-header"><div><div class="eyebrow">Module 00 · Global</div><h1>Overview</h1></div><span class="window-chip">Last 24 hours</span></header>
         <div id="pageContent" class="page-content">
           <section class="kpis" aria-label="Key metrics">
