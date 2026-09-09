@@ -1,4 +1,5 @@
 const root = document.documentElement;
+if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
 const css = getComputedStyle(root);
 const color = name => getComputedStyle(root).getPropertyValue(name).trim();
 
@@ -23,7 +24,7 @@ renderCharts(); window.addEventListener('resize', renderCharts);
 
 const pageTitle={overview:'Overview',logs:'Threat Audit',config:'Thresholds',keys:'Access'};
 document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelector('h1').textContent=pageTitle[btn.dataset.page];document.querySelector('.eyebrow').textContent=`Module 0${Object.keys(pageTitle).indexOf(btn.dataset.page)} · Global`; if(btn.dataset.page!=='overview') document.getElementById('pageContent').classList.add('dimmed'); else document.getElementById('pageContent').classList.remove('dimmed');}));
-document.getElementById('themeToggle').addEventListener('click',()=>{document.body.classList.toggle('dark');document.getElementById('themeToggle').textContent=document.body.classList.contains('dark')?'☾ Dark':'☼ Light';document.body.dataset.theme=document.body.classList.contains('dark')?'dark':'light';renderCharts()});
+document.getElementById('themeToggle').textContent=document.body.classList.contains('dark')?'☾ Dark':'☼ Light'; document.getElementById('themeToggle').addEventListener('click',()=>{document.body.classList.toggle('dark');const isDark=document.body.classList.contains('dark');localStorage.setItem('theme',isDark?'dark':'light');document.body.dataset.theme=isDark?'dark':'light';document.getElementById('themeToggle').textContent=isDark?'☾ Dark':'☼ Light';renderCharts()});
 const palette=document.getElementById('palette'); const input=document.getElementById('paletteInput'); function togglePalette(){palette.classList.toggle('open');palette.setAttribute('aria-hidden',!palette.classList.contains('open'));if(palette.classList.contains('open'))input.focus()}; document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();togglePalette()}if(e.key==='Escape')palette.classList.remove('open')}); document.querySelectorAll('[data-command]').forEach(btn=>btn.addEventListener('click',()=>{palette.classList.remove('open');document.querySelector(`[data-page="${btn.dataset.command}"]`).click()})); palette.addEventListener('click',e=>{if(e.target===palette)palette.classList.remove('open')}); document.getElementById('signOut').addEventListener('click',()=>alert('Static demo: sign out is not connected.'));
 
 

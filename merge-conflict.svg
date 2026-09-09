@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="1200" height="520" fill="#1e1e1e"/>
+<rect width="1200" height="42" fill="#252526"/>
+<text x="24" y="28" fill="#cccccc" font-family="Arial" font-size="17">VS Code · script.js · Merge Conflict</text>
+<rect x="20" y="62" width="1160" height="424" rx="4" fill="#181818" stroke="#444"/>
+<text x="42" y="98" fill="#858585" font-family="monospace" font-size="16">26</text>
+<text x="78" y="98" fill="#f8f8f2" font-family="monospace" font-size="16">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+<rect x="70" y="111" width="1080" height="86" fill="#4b2525"/>
+<text x="42" y="136" fill="#858585" font-family="monospace" font-size="16">27</text>
+<text x="78" y="136" fill="#ffb4ab" font-family="monospace" font-size="15">document.getElementById('themeToggle').textContent = ...</text>
+<text x="42" y="174" fill="#858585" font-family="monospace" font-size="16">28</text>
+<text x="78" y="174" fill="#ffb4ab" font-family="monospace" font-size="15">localStorage.setItem('theme', isDark ? 'dark' : 'light');</text>
+<text x="42" y="220" fill="#858585" font-family="monospace" font-size="16">29</text>
+<text x="78" y="220" fill="#f8f8f2" font-family="monospace" font-size="16">=======</text>
+<rect x="70" y="233" width="1080" height="86" fill="#263c2b"/>
+<text x="42" y="258" fill="#858585" font-family="monospace" font-size="16">30</text>
+<text x="78" y="258" fill="#b7f0c1" font-family="monospace" font-size="15">document.getElementById('themeToggle').textContent = ...</text>
+<text x="42" y="296" fill="#858585" font-family="monospace" font-size="16">31</text>
+<text x="78" y="296" fill="#b7f0c1" font-family="monospace" font-size="15">document.body.dataset.theme = isDark ? 'dark' : 'light';</text>
+<text x="42" y="342" fill="#858585" font-family="monospace" font-size="16">32</text>
+<text x="78" y="342" fill="#f8f8f2" font-family="monospace" font-size="16">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/darkmode-conflict</text>
+<text x="42" y="410" fill="#858585" font-family="monospace" font-size="16">33</text>
+<text x="78" y="410" fill="#9cdcfe" font-family="monospace" font-size="16">Choose one version, combine them, then stage the file.</text>
+<text x="78" y="450" fill="#6a9955" font-family="monospace" font-size="16">Conflict reproduced during git merge.</text>
+</svg>
